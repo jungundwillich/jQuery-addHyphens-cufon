@@ -6,7 +6,7 @@ jQuery-addHyphens-cufon is part of a Cufón modification to allow text to be hyp
 USAGE
 
 0. Add discretionary hyphens to your text, preferrably manually or server-side, e.g. using phpHyphenator (http://yellowgreen.de/phpHyphenator)
-1. Get our modified version of Cufón
+1. Get our modified version of Cufón from http://github.com/jungundwillich/cufon
 2. Include jQuery-addHyphens-cufon script into your document
 3. When calling Cufon.replace(), make sure to set the options "trim" to "advanced" and "hyphenate" to "true"
 4. Call the hyhenation script AFTER Cufon.replace()
