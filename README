@@ -1,0 +1,33 @@
+ABOUT
+
+jQuery-addHyphens-cufon is part of a Cufón modification to allow text to be hyphenated using soft/discretionary hyphens.
+
+
+USAGE
+
+0. Add discretionary hyphens to your text, preferrably manually or server-side, e.g. using phpHyphenator (http://yellowgreen.de/phpHyphenator)
+1. Get our modified version of Cufón
+2. Include jQuery-addHyphens-cufon script into your document
+3. When calling Cufon.replace(), make sure to set the options "trim" to "advanced" and "hyphenate" to "true"
+4. Call the hyhenation script AFTER Cufon.replace()
+
+
+EXAMPLE
+
+In the document's HEAD section:
+
+	<script src="cufon.js" type="text/javascript"></script>
+	<script src="Vegur_300.font.js" type="text/javascript"></script>
+	<script src="jquery.addhyphens-cufon.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		var selectors = 'h1, h2, h3, #content p';
+		Cufon.replace(selectors, {trim: 'advanced', hyphenate: true});
+		$(selectors).addhyphens();
+	</script>
+
+At the bottom, make sure to add
+
+<script type="text/javascript">Cufon.now();</script>
+
+That should be it. Have fun!
